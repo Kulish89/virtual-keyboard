@@ -413,9 +413,9 @@ export const BUTTONS = [
     key: ["n", "N", "т", "Т"],
     keyCode: 78,
     which: 78,
-    code: "KeyT",
+    code: "KeyN",
     location: 0,
-    description: "t",
+    description: "n",
   },
   {
     key: ["m", "M", "ь", "Ь"],
@@ -486,6 +486,7 @@ export const BUTTONS = [
     ctrlKey: false,
     metaKey: true,
     shiftKey: true,
+    unicode: "Ctrl",
     description: "modifier",
   },
   {
@@ -511,6 +512,7 @@ export const BUTTONS = [
     ctrlKey: false,
     metaKey: true,
     shiftKey: false,
+    unicode: "Alt",
     description: "modifier",
   },
   {
@@ -523,6 +525,7 @@ export const BUTTONS = [
     ctrlKey: false,
     metaKey: false,
     shiftKey: false,
+    unicode: " ",
     repeat: false,
     description: "space",
   },
@@ -536,6 +539,7 @@ export const BUTTONS = [
     ctrlKey: false,
     metaKey: true,
     shiftKey: false,
+    unicode: "Alt",
     description: "modifier",
   },
   {
@@ -548,6 +552,7 @@ export const BUTTONS = [
     ctrlKey: false,
     metaKey: true,
     shiftKey: true,
+    unicode: "Ctrl",
     description: "modifier",
   },
   {
@@ -579,7 +584,7 @@ export const BUTTONS = [
     unicode: "&#129095",
   },
   {
-    key: ["ArrowRight"],
+    key: ["&#129094"],
     keyCode: 39,
     which: 39,
     code: "ArrowRight",
