@@ -37,7 +37,13 @@ function clickOnButton(id, event) {
       textArea.value = textArea.value.substring(0, textArea.value.length - 1);
     }
     if (id === 20) {
-      CAPSLOCK = !CAPSLOCK;
+      if (!CAPSLOCK) {
+        CAPSLOCK = !CAPSLOCK;
+        button.style.backgroundColor = "rgb(83, 94, 160)";
+      } else if (CAPSLOCK) {
+        CAPSLOCK = !CAPSLOCK;
+        button.style.backgroundColor = "";
+      }
     }
   } else {
     let button = BUTTONS.find((btn) => {
@@ -60,7 +66,13 @@ function clickOnButton(id, event) {
       textArea.value = textArea.value.substring(0, textArea.value.length - 1);
     }
     if (button.keyCode === 20) {
-      CAPSLOCK = !CAPSLOCK;
+      if (!CAPSLOCK) {
+        CAPSLOCK = !CAPSLOCK;
+        btnInDOM.style.backgroundColor = "rgb(83, 94, 160)";
+      } else if (CAPSLOCK) {
+        CAPSLOCK = !CAPSLOCK;
+        btnInDOM.style.backgroundColor = "";
+      }
     }
     if (button.keyCode === 16 && event.altKey) {
       language = !language;
