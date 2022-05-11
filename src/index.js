@@ -27,8 +27,12 @@ function clickOnButton(id, event) {
       button.classList.remove("active");
     }, 100);
     if (id > 30 && id !== 8) {
-      if (event.shiftKey || CAPSLOCK) {
+      if (!CAPSLOCK && event.shiftKey) {
         textArea.value += button.firstChild.textContent;
+      } else if (CAPSLOCK) {
+        textArea.value += button.lastChild.textContent;
+      } else if (CAPSLOCK && event.shiftKey) {
+        textArea.value += button.lastChild.textContent.toLowerCase();
       } else {
         textArea.value += button.lastChild.textContent.toLowerCase();
       }
@@ -56,8 +60,12 @@ function clickOnButton(id, event) {
       btnInDOM.classList.remove("active");
     }, 100);
     if (button.keyCode > 30 && button.keyCode !== 8) {
-      if (event.shiftKey || CAPSLOCK) {
+      if (!CAPSLOCK && event.shiftKey) {
         textArea.value += btnInDOM.firstChild.textContent;
+      } else if (CAPSLOCK && event.shiftKey) {
+        textArea.value += btnInDOM.lastChild.textContent.toLowerCase();
+      } else if (CAPSLOCK) {
+        textArea.value += btnInDOM.lastChild.textContent;
       } else {
         textArea.value += btnInDOM.lastChild.textContent.toLowerCase();
       }
