@@ -8,6 +8,7 @@ let CAPSLOCK = false;
 const keyboardWrapper = document.createElement("div");
 const textArea = document.createElement("textarea");
 textArea.classList.add("text-area");
+textArea.placeholder = "Alt+Shift to toggle language";
 ROOT.append(textArea);
 keyboardWrapper.className = "keyboard__wrapper";
 createButtons(language);
